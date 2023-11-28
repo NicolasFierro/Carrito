@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: rgb(167, 72, 72);
+}
+
+.container {
+    background-color: rgb(25, 78, 99);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+h1, h3 {
+    color: #5a680a;
+}
+
+.btn-outline-success, .btn-outline-danger, .btn-outline-secondary {
+    width: 100%; /* Hace que los botones ocupen el ancho completo del contenedor */
+}
+
+/* Añade estilos adicionales según sea necesario */
