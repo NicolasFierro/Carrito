@@ -1,3 +1,4 @@
+/* Configuración general del cuerpo de la página */
 body {
     display: flex;
     align-items: center;
@@ -8,51 +9,57 @@ body {
     background-image: url('/img/Fondo.jpeg');
 }
 
+/* Estilo para el encabezado principal */
 h1 {
     text-align: center;
     color: black;
-    
 }
 
+/* Estilo para contenedores de libros y el total */
 .contenedor-libro, .contenedor-total {
-    margin-bottom: 0px;
-    background-color: rosybrown;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px brown(0, 0, 0, 0.1);
-    text-align: center;
+    margin-bottom: 0px; /* Elimina el margen inferior */
+    background-color: rosybrown; /* Establece el color de fondo */
+    padding: 20px; /* Añade relleno interno */
+    border-radius: 8px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 0 10px brown(0, 0, 0, 0.1); /* Agrega una sombra */
+    text-align: center; /* Centra el contenido */
 }
 
+/* Estilo para imágenes dentro de contenedores */
 img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    display: block; /* Convierte la imagen en un elemento de bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin-bottom: 10px; /* Agrega un pequeño margen inferior */
 }
 
+/* Estilo para etiquetas de texto */
 label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 6px;
+    font-weight: bold; /* Establece el grosor de la fuente en negrita */
+    display: block; /* Convierte la etiqueta en un elemento de bloque */
+    margin-bottom: 6px; /* Agrega un pequeño margen inferior */
 }
 
+/* Estilo para campos de entrada */
 input {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 7px;
-    box-sizing: border-box;
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    padding: 5px; /* Añade un pequeño espacio interno */
+    margin-bottom: 7px; /* Agrega un pequeño margen inferior */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
 }
 
+/* Estilo para botones */
 button {
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 10px;
+    background-color: #28a745; /* Establece el color de fondo */
+    color: #ffffff; /* Establece el color del texto */
+    border: none; /* Elimina el borde */
+    padding: 10px 15px; /* Añade relleno interno */
+    cursor: pointer; /* Cambia el cursor al estilo de puntero */
+    border-radius: 4px; /* Agrega esquinas redondeadas */
+    margin-right: 10px; /* Agrega un margen derecho */
 }
 
+/* Estilo para títulos secundarios */
 h3 {
-    margin-top: 20px;
-    color: brown;
+    margin-top: 20px; /* Agrega un margen superior */
+    color: brown; /* Establece el color del texto */
 }

@@ -6,33 +6,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+    <!-- Encabezado principal -->
     <h1> LIBRERIA LA ESQUINA DEL LECTOR </h1>
+
+    <!-- Contenedor principal utilizando Bootstrap -->
     <div class="container">
         <!-- Contenedor para ambos libros -->
         <div class="row">
+            <!-- Columna para el primer libro -->
             <div class="col-md-6">
+                <!-- Contenedor individual del libro -->
                 <div class="contenedor-libro">
+                    <!-- Imagen del libro -->
                     <img src="/img/Harry Potter.jpeg" alt="Harry Potter" width="180">
+                    <!-- Etiqueta y campo de entrada para la cantidad del libro -->
                     <label for="harryPotter">Harry Potter: $75.000</label>
                     <input type="number" id="harryPotter" placeholder="Cantidad">
+                    <!-- Párrafo para mostrar mensajes relacionados con el libro -->
                     <p id="mensajeHarryPotter"></p>
                 </div>
             </div>
 
+            <!-- Columna para el segundo libro -->
             <div class="col-md-6">
+                <!-- Contenedor individual del libro -->
                 <div class="contenedor-libro">
+                    <!-- Imagen del libro -->
                     <img src="/img/Cien años de soledad.jpeg" alt="Cien años de soledad" width="198">
+                    <!-- Etiqueta y campo de entrada para la cantidad del libro -->
                     <label for="cienAniosSoledad">Cien años de soledad: $80.000</label>
                     <input type="number" id="cienAniosSoledad" placeholder="Cantidad">
+                    <!-- Párrafo para mostrar mensajes relacionados con el libro -->
                     <p id="mensajeCienAniosSoledad"></p>
                 </div>
             </div>
         </div>
 
         <!-- Fila para mostrar el total de valor -->
-        <div class="row mt-5"> <!-- Se agrega una clase mt-5 para agregar un margen superior y separar visualmente -->
+        <div class="row mt-5">
+            <!-- Columna para el total de valor -->
             <div class="col">
-                <div class="contenedor-libro text-center"> <!-- Se agrega la clase text-center para centrar el contenido -->
+                <!-- Contenedor para el total de valor -->
+                <div class="contenedor-libro text-center">
+                    <!-- Botones y título para el total de valor -->
                     <button type="button" onclick="mostrarTotal()">Mostrar Total</button>
                     <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
                     <h3>Total de Valor: $<span id="totalValor">0</span></h3>
@@ -41,8 +57,10 @@
         </div>
     </div>
 
+    <!-- Script JavaScript para la lógica de cálculos y eventos -->
     <script>
-    function mostrarTotal() {
+        // Función para calcular y mostrar el total de valor
+        function mostrarTotal() {
             const cantidadHarryPotter = parseInt(document.getElementById("harryPotter").value) || 0;
             const cantidadCienAniosSoledad = parseInt(document.getElementById("cienAniosSoledad").value) || 0;
 
@@ -50,6 +68,7 @@
             document.getElementById("totalValor").innerHTML = totalValor;
         }
 
+        // Función para limpiar campos y mensajes
         function limpiarCampos() {
             document.getElementById("harryPotter").value = "";
             document.getElementById("cienAniosSoledad").value = "";
@@ -58,11 +77,13 @@
             document.getElementById("totalValor").innerHTML = "0";
         }
 
+        // Event listener para el input de Harry Potter
         document.getElementById("harryPotter").addEventListener("input", function () {
             const cantidad = parseInt(this.value) || 0;
             document.getElementById("mensajeHarryPotter").innerHTML = "Total de Harry Potter:" + cantidad * 75000;
         });
 
+        // Event listener para el input de Cien años de soledad
         document.getElementById("cienAniosSoledad").addEventListener("input", function () {
             const cantidad = parseInt(this.value) || 0;
             document.getElementById("mensajeCienAniosSoledad").innerHTML = "Total de Cien años de soledad:" + cantidad * 80000;
